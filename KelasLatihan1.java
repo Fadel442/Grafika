@@ -12,6 +12,7 @@ public class KelasLatihan1 extends JFrame{
 
     //create the menubar
     JMenuBar jmenu = new JMenuBar();
+    jmenu.setSize(1500, 100);
 
     //Create Spacing MenuBar
     JMenu spacer = new JMenu();
