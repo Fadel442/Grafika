@@ -4,6 +4,7 @@ import java.awt.geom.AffineTransform;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 import java.awt.geom.Rectangle2D;
+import java.awt.image.BufferedImage;
 
 import javax.swing.*;
 
@@ -14,6 +15,11 @@ public class Display extends JFrame {
     private JFrame frame;
     private JMenuBar menuBar;
     private Canvas canvas;
+
+    private Image theImage;
+
+  //The required TexturePaint.
+  private BufferedImage buffi;
 
     private static Dimension dim;
 
@@ -176,7 +182,7 @@ public class Display extends JFrame {
                     } else if (selectedLine.equals("Tipe Garis Titik-Titik")){
                         g2d.setStroke(new BasicStroke(thick, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL, 0, new float[]{1}, thick));
                     }           
-                    Ellipse2D.Double ellips = new Ellipse2D.Double(100,100,200,200);
+                    Ellipse2D.Double ellips = new Ellipse2D.Double(100,100,100,100);
                     paintColor(g2d);
                     PaintPost(g2d);
 
@@ -227,6 +233,12 @@ public class Display extends JFrame {
                     g2d.draw(rotation.createTransformedShape(line2));
                     g2d.draw(rotation.createTransformedShape(line3));
                 }
+                // //Image Texture
+                // else if (selectedShape.equals("Gambar")) {
+                //    ImageIcon image = new ImageIcon(getClass().getResource("da.png"));
+                //    JLabel displayField = new JLabel(image);
+                //    //frame.add(displayField);
+                // }
             }
         };   
         // canvas.setPreferredSize(dim);
