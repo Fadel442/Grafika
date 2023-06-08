@@ -16,16 +16,14 @@ public class Display extends JFrame {
     private JMenuBar menuBar;
     private Canvas canvas;
 
-    private Image theImage;
-
-  //The required TexturePaint.
-  private BufferedImage buffi;
-
+    
     private static Dimension dim;
-
+    
     int windowHeight = 500;
     int thick = 2;
-
+    
+    //   private Image theImage;
+    //   private BufferedImage buffi;
 
     public Display(int width, int height)
     {
@@ -41,7 +39,7 @@ public class Display extends JFrame {
     
     private void createFrame()
     {
-        frame = new JFrame("Uts");
+        frame = new JFrame("UTS");
         frame.setSize(dim);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
